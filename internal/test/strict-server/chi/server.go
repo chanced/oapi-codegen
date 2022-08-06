@@ -1,5 +1,5 @@
-//go:generate go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen --config=server.cfg.yaml ../strict-schema.yaml
-//go:generate go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen --config=types.cfg.yaml ../strict-schema.yaml
+//go:generate go run github.com/chanced/oapi-codegen/cmd/oapi-codegen --config=server.cfg.yaml ../strict-schema.yaml
+//go:generate go run github.com/chanced/oapi-codegen/cmd/oapi-codegen --config=types.cfg.yaml ../strict-schema.yaml
 
 package api
 
@@ -9,8 +9,7 @@ import (
 	"mime/multipart"
 )
 
-type StrictServer struct {
-}
+type StrictServer struct{}
 
 func (s StrictServer) JSONExample(ctx context.Context, request JSONExampleRequestObject) interface{} {
 	return JSONExample200JSONResponse(*request.Body)

@@ -13,12 +13,12 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/deepmap/oapi-codegen/examples/petstore-expanded/strict/api"
-	middleware "github.com/deepmap/oapi-codegen/pkg/chi-middleware"
+	"github.com/chanced/oapi-codegen/examples/petstore-expanded/strict/api"
+	middleware "github.com/chanced/oapi-codegen/pkg/chi-middleware"
 )
 
 func main() {
-	var port = flag.Int("port", 8080, "Port for test HTTP server")
+	port := flag.Int("port", 8080, "Port for test HTTP server")
 	flag.Parse()
 
 	swagger, err := api.GetSwagger()

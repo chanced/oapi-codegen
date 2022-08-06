@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deepmap/oapi-codegen/examples/authenticated-api/echo/api"
-	"github.com/deepmap/oapi-codegen/examples/authenticated-api/echo/server"
+	"github.com/chanced/oapi-codegen/examples/authenticated-api/echo/api"
+	"github.com/chanced/oapi-codegen/examples/authenticated-api/echo/server"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
-	var port = flag.Int("port", 8080, "port where to serve traffic")
+	port := flag.Int("port", 8080, "port where to serve traffic")
 
 	e := echo.New()
 

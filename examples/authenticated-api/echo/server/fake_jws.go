@@ -4,7 +4,7 @@ import (
 	"crypto/ecdsa"
 	"fmt"
 
-	"github.com/deepmap/oapi-codegen/pkg/ecdsafile"
+	"github.com/chanced/oapi-codegen/pkg/ecdsafile"
 	"github.com/lestrrat-go/jwx/jwa"
 	"github.com/lestrrat-go/jwx/jwk"
 	"github.com/lestrrat-go/jwx/jws"
@@ -24,10 +24,12 @@ AwEHoUQDQgAE4pPyvrB9ghqkT1Llk0A42lixkugFd/TBdOp6wf69O9Nndnp4+HcR
 s9SlG/8hjB2Hz42v4p3haKWv3uS1C6ahCQ==
 -----END EC PRIVATE KEY-----`
 
-const KeyID = `fake-key-id`
-const FakeIssuer = "fake-issuer"
-const FakeAudience = "example-users"
-const PermissionsClaim = "perm"
+const (
+	KeyID            = `fake-key-id`
+	FakeIssuer       = "fake-issuer"
+	FakeAudience     = "example-users"
+	PermissionsClaim = "perm"
+)
 
 type FakeAuthenticator struct {
 	PrivateKey *ecdsa.PrivateKey

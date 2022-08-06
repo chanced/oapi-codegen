@@ -10,14 +10,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/deepmap/oapi-codegen/examples/petstore-expanded/echo/api"
-	"github.com/deepmap/oapi-codegen/pkg/middleware"
+	"github.com/chanced/oapi-codegen/examples/petstore-expanded/echo/api"
+	"github.com/chanced/oapi-codegen/pkg/middleware"
 	"github.com/labstack/echo/v4"
 	echomiddleware "github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
-	var port = flag.Int("port", 8080, "Port for test HTTP server")
+	port := flag.Int("port", 8080, "Port for test HTTP server")
 	flag.Parse()
 
 	swagger, err := api.GetSwagger()

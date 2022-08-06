@@ -10,11 +10,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/deepmap/oapi-codegen/pkg/types"
+	"github.com/chanced/oapi-codegen/pkg/types"
 )
 
-const tagName = "json"
-const jsonContentType = "application/json"
+const (
+	tagName         = "json"
+	jsonContentType = "application/json"
+)
 
 type RequestBodyEncoding struct {
 	ContentType string
